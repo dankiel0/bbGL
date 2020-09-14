@@ -1,4 +1,4 @@
-package source;
+package resource_loaders;
 
 
 import java.awt.image.BufferedImage;
@@ -6,16 +6,20 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * The {@code ImageLoader} class loads image.
+ * @author Daniel
+ */
 public class ImageLoader {
 	/**
 	 * Returns an image given a path.
 	 * 
-	 * @param path the path of the image file.
-	 * @return the image as a buffered image.
-	 * @throws RunTimeException if the index argument is not valid.
+	 * @param path The path of the image file.
+	 * @return The image as a BufferedImage.
+	 * @throws RunTimeException If the path argument is not valid.
 	 */
 	public static BufferedImage loadImage(String path) {
-		RuntimeException runtimeException = new RuntimeException("Please fix path argument. \"" + path + "\" yields no results.");
+		RuntimeException runtimeException = new RuntimeException("Please fix image's path. \"" + path + "\" yields no results.");
 		BufferedImage image;
 		
 		if(ImageLoader.class.getClassLoader().getResourceAsStream(path) == null)
