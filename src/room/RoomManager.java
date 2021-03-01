@@ -11,16 +11,13 @@ public class RoomManager {
 	 * Sets the {@code activeRoom} to a new room.
 	 * @param room The new active room.
 	 */
-	public static void setActiveRoom(Room room) {
+	public static void setRoom(Room room) {
 		activeRoom = room;
 		activeRoom.init();
 	}
 	
-	/**
-	 * @throws RuntimeException If the active room is null.
-	 * @return {@code activeRoom} The active room.
-	 */
-	public static Room getActiveRoom() {
+	// the current room
+	public static Room getRoom() {
 		if(activeRoom == null)
 			throw new RuntimeException("Please set an active room before starting a game.");
 		

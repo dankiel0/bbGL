@@ -1,4 +1,4 @@
-package window;
+package ui;
 
 import java.awt.Canvas;
 import java.awt.Dimension;
@@ -25,7 +25,7 @@ public final class Window {
 	 */
 	public Window(String title, int width, int height) {
 		if(width < 0 || height < 0 || width > 1920 || height > 1080)
-			throw new RuntimeException("Please enter valid dimensions.");
+			throw new RuntimeException("Please enter resolution less than 1920 x 1080");
 		
 		windowDimension = new Dimension(width, height);
 		

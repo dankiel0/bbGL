@@ -8,6 +8,6 @@ import java.awt.Graphics2D;
  */
 public abstract class Room {
 	public abstract void init();
-	public abstract void update(double elapsedTime);
-	public abstract void render(Graphics2D graphics, double elapsedTime);
+	public abstract void update();
+	public abstract void render(Graphics2D graphics);
 }
