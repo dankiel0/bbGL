@@ -1,2 +1,2 @@
 # bbGL
-A Java game library for making video game
+A Java game library for making video games.
